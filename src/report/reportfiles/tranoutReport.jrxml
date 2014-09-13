@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="รายงานใบรับโอนสินค้า (ออก)" pageWidth="612" pageHeight="792" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="56" bottomMargin="56">
+	<parameter name="load_header" class="java.lang.String"/>
+	<parameter name="load_date1" class="java.lang.String"/>
+	<parameter name="load_date2" class="java.lang.String"/>
+	<parameter name="load_branch1" class="java.lang.String"/>
+	<parameter name="load_branch2" class="java.lang.String"/>
+	<parameter name="sql_date1" class="java.lang.String"/>
+	<parameter name="sql_date2" class="java.lang.String"/>
+	<parameter name="sql_condition" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     tranin.`R_No` AS tranout_R_No,
+     htranin.`R_No` AS htranout_R_No,
+     htranin.`R_Date` AS htranout_R_Date,
+     htranin.`R_Post` AS htranout_R_Post,
+     htranin.`R_Bran` AS htranout_R_Bran,
+     htranin.`R_Total` AS htranout_R_Total,
+     htranin.`R_Remark` AS htranout_R_Remark,
+     tranin.`R_Stock` AS tranout_R_Stock,
+     sum(r_amount)as htranout_R_AMOUNT,
+     branfile.`Name` AS branfile_Name
+FROM
+     `tranout` tranin LEFT JOIN `htranout` htranin ON tranin.`R_No` = htranin.`R_No`
+     LEFT JOIN `branfile` branfile ON htranin.`R_Bran` = branfile.`Code`
+GROUP BY
+     tranout_R_No
+HAVING
+     r_date between $P{sql_date1} and $P{sql_date2}
+     $P!{sql_condition}
+ORDER BY
+     htranin.`R_Bran` ASC,
+     htranin.`R_Date` ASC,
+htranin.r_no]]>
+	</queryString>
+	<field name="tranout_R_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="htranout_R_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="htranout_R_Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="htranout_R_Post" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="htranout_R_Bran" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="htranout_R_Total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="htranout_R_Remark" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tranout_R_Stock" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="htranout_R_AMOUNT" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="branfile_Name" class="java.lang.String"/>
+	<variable name="sum_r_total" class="java.lang.Integer" resetType="Group" resetGroup="htranout_R_Bran" calculation="Sum">
+		<variableExpression><![CDATA[$F{htranout_R_Total}]]></variableExpression>
+	</variable>
+	<variable name="sum_r_amount" class="java.lang.Double" resetType="Group" resetGroup="htranout_R_Bran" calculation="Sum">
+		<variableExpression><![CDATA[$F{htranout_R_AMOUNT}]]></variableExpression>
+	</variable>
+	<variable name="sum_r_total_all" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{htranout_R_Total}]]></variableExpression>
+	</variable>
+	<variable name="sum_r_amount_all" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{htranout_R_AMOUNT}]]></variableExpression>
+	</variable>
+	<group name="htranout_R_Bran">
+		<groupExpression><![CDATA[$F{htranout_R_Bran}]]></groupExpression>
+		<groupHeader>
+			<band height="18" splitType="Stretch">
+				<staticText>
+					<reportElement x="1" y="0" width="54" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[โอนไปสาขา ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="65" y="0" width="47" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{htranout_R_Bran}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="112" y="0" width="458" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{branfile_Name}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="20" splitType="Stretch">
+				<line direction="BottomUp">
+					<reportElement key="line" x="45" y="0" width="527" height="1"/>
+				</line>
+				<staticText>
+					<reportElement x="45" y="1" width="110" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[รวม(สาขา) เอกสารทั้งสิ้น]]></text>
+				</staticText>
+				<line direction="BottomUp">
+					<reportElement key="line" x="45" y="19" width="527" height="1"/>
+				</line>
+				<textField pattern="#,##0;-#,##0">
+					<reportElement x="155" y="1" width="41" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$V{htranout_R_Bran_COUNT}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;-#,##0">
+					<reportElement x="196" y="1" width="57" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$V{sum_r_total}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;-#,##0.00">
+					<reportElement x="254" y="1" width="74" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$V{sum_r_amount}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="112" y="31" width="350" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายงานใบรับโอนสินค้า (ออก) จากสาขา]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="62" width="43" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{load_branch1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="43" width="25" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="62" width="45" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{load_branch2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="298" y="62" width="12" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ถึง]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a" isBlankWhenNull="false">
+				<reportElement key="textField" x="33" y="43" width="80" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="365" y="62" width="10" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="62" width="56" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(รหัสสาขา]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="62" width="177" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["เงื่อนไข (วันที่ " + $P{load_date1} + " - " +$P{load_date2} +")"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="545" y="43" width="25" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="7" y="1" width="555" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="22" isBold="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{load_header}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="494" y="43" width="51" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " / "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="1" width="54" height="18" forecolor="#010101" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[สาขา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="55" y="1" width="68" height="18" forecolor="#010101" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="123" y="1" width="60" height="18" forecolor="#010101" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เลขที่เอกสาร]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="183" y="1" width="70" height="18" forecolor="#010101" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนรายการ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="254" y="1" width="74" height="18" forecolor="#010101" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[มูลค่าการโอน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="338" y="1" width="186" height="18" forecolor="#010101" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="522" y="1" width="48" height="18" forecolor="#010101" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เข้าสต็อก]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="572" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="19" width="572" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="55" y="0" width="68" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{htranout_R_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="0" width="73" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{htranout_R_No}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;-#,##0">
+				<reportElement x="196" y="0" width="57" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{htranout_R_Total}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="254" y="0" width="74" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{htranout_R_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="0" width="186" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{htranout_R_Remark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="524" y="0" width="48" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{htranout_R_Post}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="20" splitType="Stretch">
+			<line direction="BottomUp">
+				<reportElement key="line" x="0" y="0" width="572" height="1"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement key="line" x="0" y="19" width="572" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="45" y="1" width="92" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รวมเอกสารทั้งสิ้น]]></text>
+			</staticText>
+			<textField pattern="#,##0;-#,##0">
+				<reportElement x="137" y="1" width="46" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;-#,##0">
+				<reportElement x="196" y="1" width="57" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{sum_r_total_all}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="254" y="1" width="74" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{sum_r_amount_all}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="183" y="1" width="13" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ใบ]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

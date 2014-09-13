@@ -1,0 +1,6 @@
+server=localhost
+database=MyRestaurant_pos
+username=root
+password=
+charset=tis-620
+port=3306

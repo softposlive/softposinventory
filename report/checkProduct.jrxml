@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="checkProduct" pageWidth="612" pageHeight="792" columnWidth="552" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="groupCode1" class="java.lang.String"/>
+	<parameter name="groupCode2" class="java.lang.String"/>
+	<parameter name="branchName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT groupfile.GroupCode, groupfile.GroupName, product.PCode, product.PDesc , product.PUnit1,product.PPrice11
+FROM   groupfile inner join product on groupfile.GroupCode = product.PGroup
+WHERE  groupfile.GroupCode >= $P{groupCode1} AND groupfile.GroupCode<=$P{groupCode2} 
+       and product.PStock = 'Y' and product.PActive = 'Y' 
+order by groupfile.GroupCode,product.PCode;]]>
+	</queryString>
+	<field name="GroupCode" class="java.lang.String"/>
+	<field name="GroupName" class="java.lang.String"/>
+	<field name="PCode" class="java.lang.String"/>
+	<field name="PDesc" class="java.lang.String"/>
+	<field name="PUnit1" class="java.lang.String"/>
+	<field name="PPrice11" class="java.math.BigDecimal"/>
+	<group name="GroupCode">
+		<groupExpression><![CDATA[$F{GroupCode}]]></groupExpression>
+		<groupHeader>
+			<band height="23">
+				<textField isBlankWhenNull="false">
+					<reportElement key="textField" x="81" y="2" width="50" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Norasi" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{GroupCode}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="false">
+					<reportElement key="textField" x="134" y="2" width="70" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Norasi" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{GroupName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-13" x="1" y="2" width="60" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Norasi" size="10" isBold="true" pdfFontName="" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[แผนกสินค้า]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="12"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="10" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="124" splitType="Stretch">
+			<elementGroup>
+				<staticText>
+					<reportElement key="staticText-1" x="150" y="35" width="238" height="33" isPrintInFirstWholeBand="true" forecolor="#000000"/>
+					<box>
+						<pen lineWidth="0.0" lineStyle="Double"/>
+						<topPen lineWidth="0.0" lineStyle="Double"/>
+						<leftPen lineWidth="0.0" lineStyle="Double"/>
+						<bottomPen lineWidth="0.0" lineStyle="Double"/>
+						<rightPen lineWidth="0.0" lineStyle="Double"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Norasi" size="14" isBold="true" pdfFontName="/root/report/ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[ใบแสดงรายการสินค้าสำหรับตรวจนับ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-20" x="1" y="71" width="24" height="19" isPrintInFirstWholeBand="true"/>
+					<textElement>
+						<font fontName="Norasi" size="10" isBold="true" pdfFontName="External TTF font..." pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Date]]></text>
+				</staticText>
+			</elementGroup>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField-3" x="110" y="1" width="338" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Norasi" size="18" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{branchName}]]></textFieldExpression>
+			</textField>
+			<elementGroup>
+				<elementGroup>
+					<staticText>
+						<reportElement key="staticText-21" x="496" y="70" width="29" height="21"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="Norasi" size="10" isBold="true" pdfFontName="External TTF font..." pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						</textElement>
+						<text><![CDATA[หน้าที่]]></text>
+					</staticText>
+				</elementGroup>
+			</elementGroup>
+			<elementGroup>
+				<elementGroup>
+					<textField evaluationTime="Page" pattern="" isBlankWhenNull="false">
+						<reportElement key="textField-2" x="525" y="70" width="16" height="21"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="Norasi" isBold="true" pdfFontName="External TTF font..." pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						</textElement>
+						<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+					</textField>
+				</elementGroup>
+			</elementGroup>
+			<textField pattern="dd/MM/yyyy HH.mm.ss" isBlankWhenNull="false">
+				<reportElement key="textField-4" x="25" y="71" width="162" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Norasi"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-1" x="1" y="100" width="551" height="1"/>
+			</line>
+			<line>
+				<reportElement key="line-2" x="1" y="123" width="551" height="1"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-5" x="15" y="101" width="79" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Norasi" size="10" isBold="true" pdfFontName="D:\testiReport\ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รหัสสินค้า(Code)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-6" x="114" y="101" width="115" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Norasi" size="10" isBold="true" pdfFontName="D:\testiReport\ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ชื่อสินค้า/รายละเอียดสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="354" y="101" width="62" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Norasi" size="10" isBold="true" pdfFontName="D:\testiReport\ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ราคาต่อหน่วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-13" x="258" y="101" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Norasi" size="10" isBold="true" pdfFontName="D:\testiReport\ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[หน่วยนับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-14" x="452" y="101" width="64" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Norasi" size="10" isBold="true" pdfFontName="D:\testiReport\ANGSA.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนที่นับได้]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement key="line-8" x="429" y="15" width="123" height="1"/>
+			</line>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="18" y="1" width="70" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Norasi"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="116" y="1" width="70" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Norasi"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PDesc}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="260" y="1" width="70" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Norasi"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PUnit1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="false">
+				<reportElement key="textField" x="337" y="1" width="70" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Norasi"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{PPrice11}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="11" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>
