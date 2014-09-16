@@ -350,7 +350,7 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        bntShowMemAll.setFont(new java.awt.Font("Norasi", 0, 14));
+        bntShowMemAll.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         bntShowMemAll.setText("F2-แสดงทั้งหมด");
         bntShowMemAll.setFocusable(false);
         bntShowMemAll.setMargin(new java.awt.Insets(1, 1, 1, 1));
@@ -360,7 +360,7 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
             }
         });
 
-        bntOK.setFont(new java.awt.Font("Norasi", 0, 14));
+        bntOK.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         bntOK.setText("F5-ตกลง (OK)");
         bntOK.setFocusable(false);
         bntOK.setMargin(new java.awt.Insets(1, 1, 1, 1));
@@ -370,7 +370,7 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
             }
         });
 
-        bntExit.setFont(new java.awt.Font("Norasi", 0, 14));
+        bntExit.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         bntExit.setText("ESC-ออก(Exit)");
         bntExit.setFocusable(false);
         bntExit.setMargin(new java.awt.Insets(1, 1, 1, 1));
@@ -382,29 +382,39 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.lightGray, 2));
 
-        jLabel1.setFont(new java.awt.Font("Norasi", 0, 14));
+        jLabel1.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         jLabel1.setText("รหัสสินค้า");
 
-        TMemCode.setFont(new java.awt.Font("Norasi", 0, 14));
+        TMemCode.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         TMemCode.setText("jTextField1");
+        TMemCode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TMemCodeActionPerformed(evt);
+            }
+        });
         TMemCode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TMemCodeKeyPressed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Norasi", 0, 14));
+        jLabel2.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         jLabel2.setText("ชื่อสินค้า");
 
-        TMemName.setFont(new java.awt.Font("Norasi", 0, 14));
+        TMemName.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         TMemName.setText("jTextField1");
+        TMemName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TMemNameActionPerformed(evt);
+            }
+        });
         TMemName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TMemNameKeyPressed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Norasi", 0, 14));
+        jLabel3.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         jLabel3.setText("กลุ่มสินค้า");
 
         TMemTel.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
@@ -427,10 +437,9 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
                     .addComponent(jLabel1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TMemCode, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -460,7 +469,7 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
                 .addComponent(bntShowMemAll, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bntOK, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -474,7 +483,7 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bntExit, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(bntExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(bntOK, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bntShowMemAll, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(56, 56, 56))
@@ -489,7 +498,7 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 992, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -499,12 +508,12 @@ public class Jdi_Inv_product extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-1024)/2, (screenSize.height-768)/2, 1024, 768);
+        setSize(new java.awt.Dimension(1024, 768));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 private void bntShowMemAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntShowMemAllActionPerformed
@@ -626,6 +635,14 @@ private void tblShowMemberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIR
             }
     }
 }//GEN-LAST:event_tblShowMemberMouseClicked
+
+    private void TMemCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TMemCodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TMemCodeActionPerformed
+
+    private void TMemNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TMemNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TMemNameActionPerformed
 public void bntOKClick() {
     int index = tblShowMember.getSelectedRow();
     if (index != -1) {

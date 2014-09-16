@@ -117,9 +117,9 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "กำหนดงวดเดือน", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Norasi", 0, 14))); // NOI18N
 
-        lblMonth.setFont(new java.awt.Font("Norasi", 0, 14));
+        lblMonth.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
 
-        cmdDateChoose2.setFont(new java.awt.Font("Norasi", 0, 14));
+        cmdDateChoose2.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         cmdDateChoose2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Calendar.png"))); // NOI18N
         cmdDateChoose2.setFocusable(false);
         cmdDateChoose2.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +138,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             }
         });
 
-        txt2.setFont(new java.awt.Font("Norasi", 1, 14));
+        txt2.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         txt2.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt2FocusGained(evt);
@@ -166,7 +166,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             }
         });
 
-        txt1.setFont(new java.awt.Font("Norasi", 1, 14));
+        txt1.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         txt1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt1FocusGained(evt);
@@ -200,21 +200,20 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmdDateChoose1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmdDateChoose2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(lblMonth, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addComponent(lblMonth, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(24, 24, 24))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "กำหนดช่วงรหัสสินค้า", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Norasi", 0, 14))); // NOI18N
 
-        txtPcode1.setFont(new java.awt.Font("Norasi", 0, 14));
+        txtPcode1.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         txtPcode1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtPcode1FocusGained(evt);
@@ -237,7 +236,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             }
         });
 
-        txtPcode2.setFont(new java.awt.Font("Norasi", 0, 14));
+        txtPcode2.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         txtPcode2.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtPcode2FocusGained(evt);
@@ -292,7 +291,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "กำหนดช่วงแผนก", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Norasi", 0, 14))); // NOI18N
 
-        txtGroupFile1.setFont(new java.awt.Font("Norasi", 0, 14));
+        txtGroupFile1.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         txtGroupFile1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtGroupFile1FocusGained(evt);
@@ -315,7 +314,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             }
         });
 
-        txtGroupFile2.setFont(new java.awt.Font("Norasi", 0, 14));
+        txtGroupFile2.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         txtGroupFile2.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtGroupFile2FocusGained(evt);
@@ -366,7 +365,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "กำหนดสต็อก", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Norasi", 0, 14))); // NOI18N
 
-        txtStockFile.setFont(new java.awt.Font("Norasi", 0, 14));
+        txtStockFile.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         txtStockFile.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtStockFile.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -390,7 +389,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             }
         });
 
-        lbStockFile.setFont(new java.awt.Font("Norasi", 1, 14));
+        lbStockFile.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -399,7 +398,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtStockFile, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cmdStock, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbStockFile, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -415,7 +414,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        cmdProcess.setFont(new java.awt.Font("Norasi", 1, 14));
+        cmdProcess.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         cmdProcess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SandClock.png"))); // NOI18N
         cmdProcess.setText("F5-ประมวณผล");
         cmdProcess.setFocusable(false);
@@ -432,7 +431,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
 
         txtRowCount.setBackground(new java.awt.Color(253, 222, 190));
         txtRowCount.setEditable(false);
-        txtRowCount.setFont(new java.awt.Font("Norasi", 0, 14));
+        txtRowCount.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         txtRowCount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtRowCount.setText("จำนวนรายการ : ");
         txtRowCount.setFocusable(false);
@@ -472,7 +471,6 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -487,12 +485,12 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
         );
 
         jTabbedPane1.setFocusable(false);
-        jTabbedPane1.setFont(new java.awt.Font("Norasi", 1, 14));
+        jTabbedPane1.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         jTabbedPane1.setRequestFocusEnabled(false);
 
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cmdPrint.setFont(new java.awt.Font("Norasi", 1, 14));
+        cmdPrint.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         cmdPrint.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.gif"))); // NOI18N
         cmdPrint.setText("พิมพ์");
         cmdPrint.setFocusable(false);
@@ -502,26 +500,26 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Norasi", 1, 14));
+        jLabel1.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         jLabel1.setText("จำนวนรายการขาด");
 
-        SumX1.setFont(new java.awt.Font("Norasi", 0, 14));
+        SumX1.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         SumX1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SumX1.setFocusable(false);
         SumX1.setRequestFocusEnabled(false);
 
-        jLabel2.setFont(new java.awt.Font("Norasi", 1, 14));
+        jLabel2.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         jLabel2.setText("จำนวนรายการเกิน");
 
-        SumX2.setFont(new java.awt.Font("Norasi", 0, 14));
+        SumX2.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         SumX2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SumX2.setFocusable(false);
         SumX2.setRequestFocusEnabled(false);
 
-        jLabel3.setFont(new java.awt.Font("Norasi", 1, 14));
+        jLabel3.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         jLabel3.setText("จำนวนสินค้าที่ไม่มีขาด-เกิน");
 
-        SumX3.setFont(new java.awt.Font("Norasi", 0, 14));
+        SumX3.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         SumX3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SumX3.setFocusable(false);
         SumX3.setRequestFocusEnabled(false);
@@ -541,6 +539,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
                 .addComponent(SumX2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
+                .addGap(0, 0, 0)
                 .addComponent(SumX3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(cmdPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -561,7 +560,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
         );
 
         tblTempmove.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        tblTempmove.setFont(new java.awt.Font("Norasi", 1, 14));
+        tblTempmove.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         tblTempmove.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -593,7 +592,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -602,7 +601,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -617,7 +616,7 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1012, Short.MAX_VALUE))
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1018, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -625,11 +624,11 @@ public class Jdi_report_stockmovement extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 598, Short.MAX_VALUE))
         );
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-1024)/2, (screenSize.height-764)/2, 1024, 764);
+        setSize(new java.awt.Dimension(1024, 764));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 private void cmdProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProcessActionPerformed

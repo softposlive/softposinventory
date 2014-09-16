@@ -666,8 +666,8 @@ public class Main_tranin extends javax.swing.JDialog {
         jLabel13.setFont(new java.awt.Font("Norasi", 0, 14)); // NOI18N
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Arrow.gif"))); // NOI18N
 
-        txt14.setBackground(new java.awt.Color(246, 248, 200));
         txt14.setEditable(false);
+        txt14.setBackground(new java.awt.Color(246, 248, 200));
         txt14.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         txt14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt14.setText("txt14");
@@ -683,8 +683,8 @@ public class Main_tranin extends javax.swing.JDialog {
             }
         });
 
-        txt15.setBackground(new java.awt.Color(246, 248, 200));
         txt15.setEditable(false);
+        txt15.setBackground(new java.awt.Color(246, 248, 200));
         txt15.setFont(new java.awt.Font("Norasi", 1, 14)); // NOI18N
         txt15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt15.setText("txt15");

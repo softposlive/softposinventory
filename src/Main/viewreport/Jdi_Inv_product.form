@@ -316,6 +316,7 @@
                 <Property name="text" type="java.lang.String" value="jTextField1"/>
               </Properties>
               <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TMemCodeActionPerformed"/>
                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TMemCodeKeyPressed"/>
               </Events>
             </Component>
@@ -335,6 +336,7 @@
                 <Property name="text" type="java.lang.String" value="jTextField1"/>
               </Properties>
               <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TMemNameActionPerformed"/>
                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TMemNameKeyPressed"/>
               </Events>
             </Component>
