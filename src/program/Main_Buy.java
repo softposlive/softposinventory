@@ -193,6 +193,11 @@ public class Main_Buy extends javax.swing.JDialog {
                 txt4FocusGained(evt);
             }
         });
+        txt4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt4ActionPerformed(evt);
+            }
+        });
         txt4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt4KeyPressed(evt);
@@ -233,6 +238,11 @@ public class Main_Buy extends javax.swing.JDialog {
                 txt2FocusGained(evt);
             }
         });
+        txt2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt2ActionPerformed(evt);
+            }
+        });
         txt2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt2KeyPressed(evt);
@@ -267,6 +277,11 @@ public class Main_Buy extends javax.swing.JDialog {
                 txt17FocusGained(evt);
             }
         });
+        txt17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt17ActionPerformed(evt);
+            }
+        });
         txt17.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt17KeyPressed(evt);
@@ -293,6 +308,11 @@ public class Main_Buy extends javax.swing.JDialog {
                 txt18FocusGained(evt);
             }
         });
+        txt18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt18ActionPerformed(evt);
+            }
+        });
         txt18.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt18KeyPressed(evt);
@@ -307,6 +327,11 @@ public class Main_Buy extends javax.swing.JDialog {
         txt19.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt19FocusGained(evt);
+            }
+        });
+        txt19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt19ActionPerformed(evt);
             }
         });
         txt19.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -329,6 +354,11 @@ public class Main_Buy extends javax.swing.JDialog {
                 txt1FocusGained(evt);
             }
         });
+        txt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt1ActionPerformed(evt);
+            }
+        });
         txt1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt1KeyPressed(evt);
@@ -339,6 +369,11 @@ public class Main_Buy extends javax.swing.JDialog {
         });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout HeaderPanalLayout = new javax.swing.GroupLayout(HeaderPanal);
         HeaderPanal.setLayout(HeaderPanalLayout);
@@ -439,6 +474,11 @@ public class Main_Buy extends javax.swing.JDialog {
                 txt6FocusGained(evt);
             }
         });
+        txt6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt6ActionPerformed(evt);
+            }
+        });
         txt6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt6KeyPressed(evt);
@@ -449,6 +489,11 @@ public class Main_Buy extends javax.swing.JDialog {
         txt7.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt7FocusGained(evt);
+            }
+        });
+        txt7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt7ActionPerformed(evt);
             }
         });
         txt7.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -465,14 +510,14 @@ public class Main_Buy extends javax.swing.JDialog {
         btnProduct.setAlignmentY(0.0F);
         btnProduct.setFocusable(false);
         btnProduct.setRequestFocusEnabled(false);
-        btnProduct.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProductActionPerformed(evt);
-            }
-        });
         btnProduct.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 btnProductFocusGained(evt);
+            }
+        });
+        btnProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductActionPerformed(evt);
             }
         });
         btnProduct.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -486,6 +531,11 @@ public class Main_Buy extends javax.swing.JDialog {
         txt9.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt9FocusGained(evt);
+            }
+        });
+        txt9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt9ActionPerformed(evt);
             }
         });
         txt9.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -522,6 +572,11 @@ public class Main_Buy extends javax.swing.JDialog {
         txt10.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt10FocusGained(evt);
+            }
+        });
+        txt10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt10ActionPerformed(evt);
             }
         });
         txt10.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -595,6 +650,11 @@ public class Main_Buy extends javax.swing.JDialog {
                 txt21FocusGained(evt);
             }
         });
+        txt21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt21ActionPerformed(evt);
+            }
+        });
         txt21.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt21KeyPressed(evt);
@@ -608,6 +668,11 @@ public class Main_Buy extends javax.swing.JDialog {
         txt20.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt20FocusGained(evt);
+            }
+        });
+        txt20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt20ActionPerformed(evt);
             }
         });
         txt20.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -628,6 +693,11 @@ public class Main_Buy extends javax.swing.JDialog {
         txt22.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt22FocusGained(evt);
+            }
+        });
+        txt22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt22ActionPerformed(evt);
             }
         });
         txt22.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -692,7 +762,7 @@ public class Main_Buy extends javax.swing.JDialog {
                         .addComponent(txt20, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                         .addComponent(jLabel16)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
                 .addGroup(ItemPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ItemPanalLayout.createSequentialGroup()
                         .addGroup(ItemPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -720,7 +790,7 @@ public class Main_Buy extends javax.swing.JDialog {
                         .addGroup(ItemPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt12)
                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ItemPanalLayout.setVerticalGroup(
             ItemPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -803,14 +873,14 @@ public class Main_Buy extends javax.swing.JDialog {
             }
         });
         tblShow.setRowHeight(25);
-        tblShow.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblShowMouseClicked(evt);
-            }
-        });
         tblShow.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 tblShowFocusLost(evt);
+            }
+        });
+        tblShow.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblShowMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(tblShow);
@@ -1094,7 +1164,7 @@ public class Main_Buy extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1002, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, Short.MAX_VALUE))
                 .addGap(57, 57, 57))
         );
         layout.setVerticalGroup(
@@ -1693,6 +1763,62 @@ private void txt4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt
     private void txt16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt16KeyReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_txt16KeyReleased
+
+    private void txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt1ActionPerformed
+
+    private void txt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt2ActionPerformed
+
+    private void txt17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt17ActionPerformed
+
+    private void txt18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt18ActionPerformed
+
+    private void txt19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt19ActionPerformed
+
+    private void txt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt4ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void txt6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt6ActionPerformed
+
+    private void txt7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt7ActionPerformed
+
+    private void txt9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt9ActionPerformed
+
+    private void txt21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt21ActionPerformed
+
+    private void txt10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt10ActionPerformed
+
+    private void txt20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt20ActionPerformed
+
+    private void txt22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt22ActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
