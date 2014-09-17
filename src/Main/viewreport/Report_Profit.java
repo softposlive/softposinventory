@@ -52,6 +52,7 @@ public class Report_Profit extends javax.swing.JDialog {
         jTextField6 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("แสดงรายการบันทึกค่าใช้จ่าย (Voucher)");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

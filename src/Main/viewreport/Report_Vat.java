@@ -45,6 +45,7 @@ public class Report_Vat extends javax.swing.JDialog {
         btn_print = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("รายงานภาษีซื้อ (Vat)");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -186,7 +187,7 @@ public class Report_Vat extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(cmdProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(14, Short.MAX_VALUE))
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, Short.MAX_VALUE)
         );
 
         jPanel3.setBackground(new java.awt.Color(204, 153, 255));

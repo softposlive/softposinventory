@@ -45,6 +45,7 @@ public class Report_VatS extends javax.swing.JDialog {
         btn_print = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("รายงานภาษีขายจากเครื่อง (POS-Sale)");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

@@ -72,6 +72,7 @@ public class Report_Profit_Id extends javax.swing.JDialog {
         btn_print2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("สรุปรายการค่าใช้จ่าย (ตาามรหัสค่าใช้จ่าย)");
 
         jPanel1.setBackground(new java.awt.Color(254, 234, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -624,7 +625,7 @@ public class Report_Profit_Id extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

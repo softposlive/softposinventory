@@ -52,6 +52,7 @@ public class View_Bproduct extends javax.swing.JDialog {
         jTextField6 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("แสดงรายการซื้อสินค้า (ตามเอกสารการซื้อ)");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

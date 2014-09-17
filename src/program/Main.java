@@ -24,7 +24,7 @@ import Main.viewreport.Report_In;
 import Main.viewreport.Report_InGroup;
 import Main.viewreport.Report_Profit;
 import Main.viewreport.Report_Profit_Id;
-import Main.viewreport.Report_Profit_Poss;
+import Main.viewreport.Report_Prosit_Poss1;
 import Main.viewreport.Report_Vat;
 import Main.viewreport.Report_VatS;
 import Main.viewreport.View_BProduct_Group;
@@ -904,7 +904,7 @@ private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 
 private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
     if (Inv_UserRec.Stock11.equals("Y")) {
-        Report_Profit_Poss frm = new Report_Profit_Poss(this, true);
+        Report_Prosit_Poss1 frm = new Report_Prosit_Poss1(this, true);
         frm.setVisible(true);
     } else {
         ShowUserError();

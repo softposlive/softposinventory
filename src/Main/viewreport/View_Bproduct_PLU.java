@@ -65,6 +65,7 @@ public class View_Bproduct_PLU extends javax.swing.JDialog {
         btn_print2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("สรุปการรับสินค้าตามรหัสสินค้า");
 
         jPanel1.setBackground(new java.awt.Color(254, 234, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());

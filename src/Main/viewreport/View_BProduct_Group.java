@@ -72,6 +72,7 @@ public class View_BProduct_Group extends javax.swing.JDialog {
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("การสรุปการซื้อสินค้าตามแผนก");
 
         jPanel1.setBackground(new java.awt.Color(254, 234, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
