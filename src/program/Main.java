@@ -354,15 +354,30 @@ public class Main extends javax.swing.JFrame {
 
         jMenuItem5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jMenuItem5.setText("ใบลดหนี้ & ส่งคืนสินค้า");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed1(evt);
+            }
+        });
         jMenu1.add(jMenuItem5);
         jMenu1.add(jSeparator1);
 
         jMenuItem6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jMenuItem6.setText("แฟ้มข้อมูลผู้ขาย & เจ้าหนี้");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed1(evt);
+            }
+        });
         jMenu1.add(jMenuItem6);
 
         jMenuItem7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jMenuItem7.setText("แฟ้มข้อมูลค่าใช้จ่ายอื่นๆ");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed1(evt);
+            }
+        });
         jMenu1.add(jMenuItem7);
 
         jMenuBar3.add(jMenu1);
@@ -1219,7 +1234,7 @@ private void menu_tranoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
 
     private void jMenuItem3ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed1
         if (Inv_UserRec.Stock21.equals("Y")) {
-            Main_Buy m = new Main_Buy(this, true);
+             BuyOrder m = new BuyOrder(this, true);
             m.setVisible(true);
         } else {
             ShowUserError();
@@ -1228,7 +1243,7 @@ private void menu_tranoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
 
     private void jMenuItem4ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed1
         if (Inv_UserRec.Stock21.equals("Y")) {
-            SaveCostDialog s = new SaveCostDialog(this, true);
+            Voucher s = new Voucher(this, true);
             s.setVisible(true);
         } else {
             ShowUserError();
@@ -1288,6 +1303,33 @@ private void menu_tranoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
             ShowUserError();
         }
     }//GEN-LAST:event_jMenuItem14ActionPerformed1
+
+    private void jMenuItem5ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed1
+        if (Inv_UserRec.Stock41.equals("Y")) {
+            Credit frm = new Credit(this, true);
+            frm.setVisible(true);
+        } else {
+            ShowUserError();
+        }
+    }//GEN-LAST:event_jMenuItem5ActionPerformed1
+
+    private void jMenuItem6ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed1
+         if (Inv_UserRec.Stock41.equals("Y")) {
+            NormalMode frm = new NormalMode(this, true);
+            frm.setVisible(true);
+        } else {
+            ShowUserError();
+        }
+    }//GEN-LAST:event_jMenuItem6ActionPerformed1
+
+    private void jMenuItem7ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed1
+         if (Inv_UserRec.Stock41.equals("Y")) {
+            CodeAcoutt frm = new CodeAcoutt(this, true);
+            frm.setVisible(true);
+        } else {
+            ShowUserError();
+        }
+    }//GEN-LAST:event_jMenuItem7ActionPerformed1
 
     /**
      * @param args the command line arguments
