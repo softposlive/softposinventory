@@ -592,62 +592,31 @@ public class View_BProduct_Group extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt1FocusGained
-        if(txt1.getText().trim().equals("")){
-            Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.DAY_OF_MONTH,1);
-            txt1.setText(Format.dateFmtShow.format(cal.getTime()));
-        }
-        txt1.selectAll();
+        
     }//GEN-LAST:event_txt1FocusGained
 
     private void txt1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1KeyPressed
-        if(evt.getKeyCode() == evt.VK_F1){
-            cmdDateChoose1();
-        }
-        else if(evt.getKeyCode() == evt.VK_ENTER){
-            txt2.requestFocus();
-        }else if(evt.getKeyCode() == evt.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == evt.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txt1KeyPressed
 
     private void txt2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt2FocusGained
-        if(txt2.getText().trim().equals("")){
-            Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.DAY_OF_MONTH, DateUtilities.getMaxDay( (GregorianCalendar) cal ));
-            txt2.setText(Format.dateFmtShow.format(cal.getTime()));
-        }
-        if(txt1.getText().trim().equals("")){
-            txt1.requestFocus();
-        }
-        txt2.selectAll();
+        
     }//GEN-LAST:event_txt2FocusGained
 
     private void txt2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2KeyPressed
-        if(evt.getKeyCode() == evt.VK_F1){
-            cmdDateChoose2();
-        }
-        else if(evt.getKeyCode() == evt.VK_ENTER){
-            txtPcode1.requestFocus();
-        }else if(evt.getKeyCode() == evt.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == evt.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txt2KeyPressed
 
     private void cmdDateChoose1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdDateChoose1ActionPerformed
-        cmdDateChoose1();
+        
     }//GEN-LAST:event_cmdDateChoose1ActionPerformed
 
     private void cmdDateChoose2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdDateChoose2ActionPerformed
-        cmdDateChoose2();
+        
     }//GEN-LAST:event_cmdDateChoose2ActionPerformed
 
     private void cmdProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProcessActionPerformed
-        cmdProcess();
+        
     }//GEN-LAST:event_cmdProcessActionPerformed
 
     private void txtPcode1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPcode1FocusGained
@@ -655,16 +624,7 @@ public class View_BProduct_Group extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPcode1FocusGained
 
     private void txtPcode1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPcode1KeyPressed
-        if(evt.getKeyCode() == evt.VK_F1){
-            cmdProductChoose3ActionPerformed(new ActionEvent(new Object(),0,""));
-        }
-        else if(evt.getKeyCode() == evt.VK_ENTER){
-            txtPcode2.requestFocus();
-        }else if(evt.getKeyCode() == evt.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == evt.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txtPcode1KeyPressed
 
     private void txtPcode2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPcode2FocusGained
@@ -672,34 +632,15 @@ public class View_BProduct_Group extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPcode2FocusGained
 
     private void txtPcode2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPcode2KeyPressed
-        if(evt.getKeyCode() == evt.VK_F1){
-            cmdProductChoose4ActionPerformed(new ActionEvent(new Object(),0,""));
-        }
-        else if(evt.getKeyCode() == evt.VK_ENTER){
-            txtPbran1.requestFocus();
-        }else if(evt.getKeyCode() == evt.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == evt.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txtPcode2KeyPressed
 
     private void cmdProductChoose3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProductChoose3ActionPerformed
-        jdi_showgroupfile jbpa = new jdi_showgroupfile(new NimbusFrame(),true);
-        jbpa.setLocation(cmdProductChoose3.getLocationOnScreen());
-        jbpa.setVisible(true);
-        if(jbpa.getValueFromShowGroupFile()!= null)
-        txtPcode1.setText(jbpa.getValueFromShowGroupFile()[0]);
-        txtPcode1.requestFocus();
+        
     }//GEN-LAST:event_cmdProductChoose3ActionPerformed
 
     private void cmdProductChoose4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProductChoose4ActionPerformed
-        jdi_showgroupfile jbpa = new jdi_showgroupfile(new NimbusFrame(),true);
-        jbpa.setLocation(cmdProductChoose4.getLocationOnScreen());
-        jbpa.setVisible(true);
-        if(jbpa.getValueFromShowGroupFile()!= null)
-        txtPcode2.setText(jbpa.getValueFromShowGroupFile()[0]);
-        txtPcode2.requestFocus();
+        
     }//GEN-LAST:event_cmdProductChoose4ActionPerformed
 
     private void txtPbran1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPbran1FocusGained
@@ -707,16 +648,7 @@ public class View_BProduct_Group extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPbran1FocusGained
 
     private void txtPbran1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPbran1KeyPressed
-        if(evt.getKeyCode() == evt.VK_F1){
-            cmdBranchChoose1ActionPerformed(new ActionEvent(new Object(),0,""));
-        }
-        else if(evt.getKeyCode() == evt.VK_ENTER){
-            txtPbran2.requestFocus();
-        }else if(evt.getKeyCode() == evt.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == evt.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txtPbran1KeyPressed
 
     private void txtPbran2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPbran2FocusGained
@@ -724,24 +656,15 @@ public class View_BProduct_Group extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPbran2FocusGained
 
     private void txtPbran2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPbran2KeyPressed
-        if(evt.getKeyCode() == evt.VK_F1){
-            cmdBranchChoose2ActionPerformed(new ActionEvent(new Object(),0,""));
-        }
-        else if(evt.getKeyCode() == evt.VK_ENTER){
-            txt1.requestFocus();
-        }else if(evt.getKeyCode() == evt.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == evt.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txtPbran2KeyPressed
 
     private void cmdBranchChoose1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBranchChoose1ActionPerformed
-        searchFacF1Dialog(txtPbran1);
+        
     }//GEN-LAST:event_cmdBranchChoose1ActionPerformed
 
     private void cmdBranchChoose2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBranchChoose2ActionPerformed
-        searchFacF1Dialog2(txtPbran2);
+        
     }//GEN-LAST:event_cmdBranchChoose2ActionPerformed
 
     private void cmdPrint2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPrint2ActionPerformed
@@ -759,7 +682,7 @@ public class View_BProduct_Group extends javax.swing.JDialog {
     }//GEN-LAST:event_tblHeaderKeyPressed
 
     private void cmdPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPrintActionPerformed
-        report.sumReciveGroup1PrintReport(txt1.getText().trim(), txt2.getText().trim(), txtPcode1.getText().trim(), txtPcode2.getText().trim(), txtPbran1.getText().trim(), txtPbran2.getText().trim(), true);
+
     }//GEN-LAST:event_cmdPrintActionPerformed
 
     private void tblPage2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblPage2KeyPressed
@@ -769,7 +692,7 @@ public class View_BProduct_Group extends javax.swing.JDialog {
     }//GEN-LAST:event_tblPage2KeyPressed
 
     private void cmdPrint1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPrint1ActionPerformed
-        report.sumReciveGroup2PrintReport(txt1.getText().trim(), txt2.getText().trim(), txtPcode1.getText().trim(), txtPcode2.getText().trim(), txtPbran1.getText().trim(), txtPbran2.getText().trim(), true);
+
     }//GEN-LAST:event_cmdPrint1ActionPerformed
 
     /**

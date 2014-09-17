@@ -773,42 +773,31 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDocnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDocnoActionPerformed
-        searchDocF1Dialog();
+        
     }//GEN-LAST:event_btnDocnoActionPerformed
 
     private void txt4FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt4FocusGained
-        txt4.selectAll();
+        
     }//GEN-LAST:event_txt4FocusGained
 
     private void txt4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt4KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txt4_OnExit();
-        } else if (evt.getKeyCode() == KeyEvent.VK_F1) {
-            //btnFactoryActionPerformed(null);
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            addNewDoc();
-        }
+        
     }//GEN-LAST:event_txt4KeyPressed
 
     private void txt4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt4KeyReleased
-        factoryAuto();
+        
     }//GEN-LAST:event_txt4KeyReleased
 
     private void txt2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt2FocusGained
-        txt2.setText(txt2.getText());
-        txt2.selectAll();
+        
     }//GEN-LAST:event_txt2FocusGained
 
     private void txt2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txt2_OnExit();
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            addNewDoc();
-        }
+        
     }//GEN-LAST:event_txt2KeyPressed
 
     private void btnCalendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalendarActionPerformed
-        cmdDateChoose1();
+        
     }//GEN-LAST:event_btnCalendarActionPerformed
 
     private void btnCalendarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCalendarFocusGained
@@ -816,7 +805,7 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCalendarFocusGained
 
     private void btnCalendarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCalendarKeyPressed
-        escapeEvent(evt);
+        
     }//GEN-LAST:event_btnCalendarKeyPressed
 
     private void txt17FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt17FocusGained
@@ -848,35 +837,7 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }//GEN-LAST:event_txt1FocusGained
 
     private void txt1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1KeyPressed
-        if (txt1.getText().equals("\\") || txt1.getText().equals("'")
-            || txt1.getText().equals("\"")) {
-            JOptionPane.showMessageDialog(this, "ไม่ควรขึ้นต้นเลขที่เอกสารด้วยเครื่องหมายดังต่อไปนี้ \n"
-                + "( '\\' ) , ( ' ), ( \" )");
-            txt1.setText("");
-            txt1.requestFocus();
-            return;
-        } else if (evt.getKeyCode() == KeyEvent.VK_SPACE) {
-            JOptionPane.showMessageDialog(this, "กำหนดเลขที่เอกสารไม่ถูกต้อง ไม่ควรพิมพ์ค่าว่างระหว่างชื่อเลขที่เอกสาร !");
-            txt1.setText("");
-            txt1.requestFocus();
-            return;
-        }
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            if (txt1.getText().equals("")) {
-                JOptionPane.showMessageDialog(this, msgNotFoundDocno);
-                txt1.requestFocus();
-                return;
-            }
-            txt1_OnExit();
-        } else if (evt.getKeyCode() == KeyEvent.VK_F1) {
-            btnDocnoActionPerformed(null);
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            if (txt1.getText().equals("")) {
-                dispose();
-            } else {
-                txt1.setText("");
-            }
-        }
+        
     }//GEN-LAST:event_txt1KeyPressed
 
     private void txt1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1KeyReleased
@@ -884,60 +845,27 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }//GEN-LAST:event_txt1KeyReleased
 
     private void txt6FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt6FocusGained
-        GetLastQue();
-        txt6.selectAll();
+        
     }//GEN-LAST:event_txt6FocusGained
 
     private void txt6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt6KeyPressed
-        try {
-            Integer.parseInt(txt6.getText());
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "กรุณาระบุลำดับรายการสินค้าให้เป็นตัวเลข !");
-            txt6.requestFocus();
-            return;
-        }
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txt6.setFocusable(false);
-            txt7.setFocusable(true);
-            txt7.requestFocus();
-            btnProduct.setEnabled(true);
-            txt6_OnExit();
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            addNewItem();
-            addNewDoc();
-            txt1.requestFocus();
-        }
+        
     }//GEN-LAST:event_txt6KeyPressed
 
     private void txt7FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt7FocusGained
-        txt7.setText(txt7.getText());
-        txt7.selectAll();
+        
     }//GEN-LAST:event_txt7FocusGained
 
     private void txt7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt7KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_F1) {
-            if (searchProF1Dialog()) {
-                txt7OnExit();
-            }
-            txt7.requestFocus();
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            addNewItem();
-            txt6.setFocusable(true);
-            txt6.requestFocus();
-        } else if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txt7OnExit();
-        }
+        
     }//GEN-LAST:event_txt7KeyPressed
 
     private void txt7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt7KeyReleased
-        productAuto();
+        
     }//GEN-LAST:event_txt7KeyReleased
 
     private void btnProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductActionPerformed
-        if (searchProF1Dialog()) {
-            txt7OnExit();
-        }
-        txt7.requestFocus();
+        
     }//GEN-LAST:event_btnProductActionPerformed
 
     private void btnProductFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnProductFocusGained
@@ -945,122 +873,35 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }//GEN-LAST:event_btnProductFocusGained
 
     private void btnProductKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnProductKeyPressed
-        escapeEvent(evt);
+        
     }//GEN-LAST:event_btnProductKeyPressed
 
     private void txt10FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt10FocusGained
-        String bak = txt10.getText();
-        txt10.setText("");
-        txt10.setText(bak);
-        txt10.requestFocus();
-        txt10.selectAll();
+        
     }//GEN-LAST:event_txt10FocusGained
 
     private void txt10KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt10KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txt10_OnExit();
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            addNewItem();
-            txt6.setFocusable(true);
-            txt6.requestFocus();
-        }
+        
     }//GEN-LAST:event_txt10KeyPressed
 
     private void txt10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt10KeyReleased
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            txt10.setText("0.000");
-        } else {
-            try {
-                Float.parseFloat(txt10.getText().trim());
-                calculateValues();
-            } catch (NumberFormatException ex) {
-            }
-        }
+        
     }//GEN-LAST:event_txt10KeyReleased
 
     private void btnDelItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelItemActionPerformed
-        if (txt1.getText().equals("")) {
-            txt1.requestFocus();
-            return;
-        }
-        if (txt4.getText().equals("")) {
-            txt4.requestFocus();
-            return;
-        } else if (txt7.getText().equals("")) {
-            txt7.requestFocus();
-            JOptionPane.showMessageDialog(this, "กรุณาระบุรหัสสินค้า");
-            return;
-        } else if (txt9.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "กรุณาระบุคลังสินค้า");
-            txt9.requestFocus();
-            return;
-        }
-        cmdDelete();
+        
     }//GEN-LAST:event_btnDelItemActionPerformed
 
     private void btnDelItemKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnDelItemKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            addNewItem();
-            txt6.setFocusable(true);
-            txt6.requestFocus();
-        }
+        
     }//GEN-LAST:event_btnDelItemKeyPressed
 
     private void btnAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddItemActionPerformed
-        if (txt1.getText().equals("")) {
-            txt1.requestFocus();
-            return;
-        }
-        if (txt4.getText().equals("")) {
-            txt4.requestFocus();
-            return;
-        } else if (txt7.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "กรุณาระบุรหัสสินค้า");
-            txt7.requestFocus();
-            return;
-        } else if (txt9.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "กรุณาระบุคลังสินค้า");
-            txt9.requestFocus();
-            return;
-        }
-        if (!CheckMakeStock.txt7_Stock(txt7.getText())) {
-            txt7.requestFocus();
-            return;
-        }
-        txt10_OnExit();
-        //ตรวจสอบ flag ว่าให้กำหนดแจ้งเตือนหรือไม
-        Db_company db = new Db_company();
-        stock_update stk = new stock_update();
-        stk.stock_update();
-        boolean minimumchk = db.getCompanyDetail().getMinchk().equals("Y");
-
-        if (txt10.getText().indexOf("-") != -1) {
-            if (minimumchk) {
-                String STOCK = txt9.getText();
-                String PCODE = txt7.getText();
-                double QTY = Double.parseDouble(txt10.getText());
-                Date d = new Date();
-                try {
-                    d = new SimpleDateFormat("dd/MM/yyyy").parse(txt2.getText());
-                } catch (ParseException ex) {
-                    JOptionPane.showMessageDialog(this, "Parse: " + ex.getMessage());
-                }
-                if (stk.checkStockOver(STOCK, PCODE, QTY, d)) {
-                    txt10.requestFocus();
-                    return;
-                }
-            }
-        }
-        cmdOk();
-        }
+        
     }//GEN-LAST:event_btnAddItemActionPerformed
 
     private void btnAddItemKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnAddItemKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            addNewItem();
-            txt6.setFocusable(true);
-            txt6.requestFocus();
-        }
+        
     }//GEN-LAST:event_btnAddItemKeyPressed
 
     private void txt20FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt20FocusGained
@@ -1100,31 +941,7 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }//GEN-LAST:event_txt16KeyReleased
 
     private void tblShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblShowMouseClicked
-        if (!isPost) {
-            if (evt.getClickCount() == 2) {
-                int index = Integer.parseInt("" + tblShow.getValueAt(tblShow.getSelectedRow(), 0));
-                System.out.println("index = " + index);
-                GetDataRecord(index);
-                txt6.setFocusable(false);
-                txt7.setFocusable(true);
-                txt7.requestFocus();
-                btnProduct.setEnabled(true);
-                try {
-                    int selected = tblShow.getSelectedRow();
-                    String value = "" + tblShow.getValueAt(selected, 4);
-                    System.out.println(value);
-                    double chkRow = Double.parseDouble(value);
-                    if (chkRow > 0) {
-                        btnDelItem.setEnabled(false);
-                    } else {
-                        btnDelItem.setEnabled(true);
-                    }
-                } catch (Exception e) {
-                    PUtility.ShowError(e.getMessage());
-                    btnDelItem.setEnabled(false);
-                }
-            }
-        }
+        
     }//GEN-LAST:event_tblShowMouseClicked
 
     private void tblShowFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblShowFocusLost
@@ -1132,7 +949,7 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }//GEN-LAST:event_tblShowFocusLost
 
     private void btn_addnewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addnewActionPerformed
-        addNewDoc();
+        
     }//GEN-LAST:event_btn_addnewActionPerformed
 
     private void btn_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelActionPerformed
@@ -1140,41 +957,23 @@ public class Main_Count_Stock extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_cancelActionPerformed
 
     private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
-        if (txt1.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(this, msgNotFoundDocno);
-            txt1.requestFocus();
-            return;
-        }
-        if (txt2_OnExit()) {
-            cmdSaveUpdate();
-        }
+        
     }//GEN-LAST:event_btn_saveActionPerformed
 
     private void btn_deldocnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deldocnoActionPerformed
-        if (txt1.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(this, msgNotFoundDocno);
-            txt1.requestFocus();
-            return;
-        }
-        cmdRemove();
+        
     }//GEN-LAST:event_btn_deldocnoActionPerformed
 
     private void btn_listdocnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_listdocnoActionPerformed
-        cmdOrderShow();
-        txt1.requestFocus();
+        
     }//GEN-LAST:event_btn_listdocnoActionPerformed
 
     private void btn_printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_printActionPerformed
-        if (txt1.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(this, msgNotFoundDocno);
-            txt1.requestFocus();
-            return;
-        }
-        cmdPrintOrder();
+        
     }//GEN-LAST:event_btn_printActionPerformed
 
     private void btn_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exitActionPerformed
-        cmdExit();
+        
     }//GEN-LAST:event_btn_exitActionPerformed
 
     private void btnDocno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDocno1ActionPerformed

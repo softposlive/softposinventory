@@ -358,12 +358,7 @@ public class Report_InGroup extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdDateChoose2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdDateChoose2ActionPerformed
-
-        Point point = cmdDateChoose2.getLocationOnScreen();
-        utilities.DateChooser.DateChooserDialog dcd = new utilities.DateChooser.DateChooserDialog(null, true, point);
-        dcd.setVisible(true);
-        txt2.setText(dateFmtShow.format(dcd.getSelectedDate().getTime()));
-        txtPcode1.requestFocus();
+        
     }//GEN-LAST:event_cmdDateChoose2ActionPerformed
 
     private void cmdDateChoose2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cmdDateChoose2FocusGained
@@ -379,37 +374,11 @@ public class Report_InGroup extends javax.swing.JDialog {
     }//GEN-LAST:event_txt2ActionPerformed
 
     private void txt2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt2FocusGained
-        if (txt2.getText().trim().equals("")) {
-            txt2.setText(dateFmtShow.format(Calendar.getInstance().getTime()));
-            txt2.selectAll();
-        }
-        if (txt1.getText().trim().equals("")) {
-            txt1.requestFocus();
-        }
+        
     }//GEN-LAST:event_txt2FocusGained
 
     private void txt2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_F5) {
-            cmdProcessActionPerformed(new ActionEvent(new Object(), 0, "0"));
-        } else if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtPcode1.requestFocus();
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            if(isClose){
-                this.dispose();
-            }else{
-                PUtility.ShowError("กำลังประมวลผลรายการความเคลื่อนไหว ไม่สามารถออกจากหน้าจอนี้ได้ \n" +
-                    "กรุณารอสักครู่...");
-            }
-        }
-        if (evt.getKeyCode() == KeyEvent.VK_F1) {
-
-            Point point = cmdDateChoose2.getLocation();
-            point.setLocation(point.getX(), point.getY() + 115);
-            utilities.DateChooser.DateChooserDialog dcd = new utilities.DateChooser.DateChooserDialog(null, true, point);
-            dcd.setVisible(true);
-            txt2.setText(dateFmtShow.format(dcd.getSelectedDate().getTime()));
-            txtPcode1.requestFocus();
-        }
+        
     }//GEN-LAST:event_txt2KeyPressed
 
     private void txt2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2KeyReleased
@@ -417,12 +386,7 @@ public class Report_InGroup extends javax.swing.JDialog {
     }//GEN-LAST:event_txt2KeyReleased
 
     private void cmdDateChoose1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdDateChoose1ActionPerformed
-
-        Point point = cmdDateChoose1.getLocationOnScreen();
-        utilities.DateChooser.DateChooserDialog dcd = new utilities.DateChooser.DateChooserDialog(null, true, point);
-        dcd.setVisible(true);
-        txt1.setText(dateFmtShow.format(dcd.getSelectedDate().getTime()));
-        txt2.requestFocus();
+        
     }//GEN-LAST:event_cmdDateChoose1ActionPerformed
 
     private void cmdDateChoose1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmdDateChoose1KeyPressed
@@ -430,34 +394,11 @@ public class Report_InGroup extends javax.swing.JDialog {
     }//GEN-LAST:event_cmdDateChoose1KeyPressed
 
     private void txt1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt1FocusGained
-        if (txt1.getText().trim().equals("")) {
-            txt1.setText(dateFmtShow.format(Calendar.getInstance().getTime()));
-            txt1.selectAll();
-        }
+        
     }//GEN-LAST:event_txt1FocusGained
 
     private void txt1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_F5) {
-            cmdProcessActionPerformed(new ActionEvent(new Object(), 0, "0"));
-        } else if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txt2.requestFocus();
-        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            if(isClose){
-                this.dispose();
-            }else{
-                PUtility.ShowError("กำลังประมวลผลรายการความเคลื่อนไหว ไม่สามารถออกจากหน้าจอนี้ได้ \n" +
-                    "กรุณารอสักครู่...");
-            }
-        }
-        if (evt.getKeyCode() == KeyEvent.VK_F1) {
-
-            Point point = cmdDateChoose1.getLocation();
-            point.setLocation(point.getX(), point.getY() + 115);
-            utilities.DateChooser.DateChooserDialog dcd = new utilities.DateChooser.DateChooserDialog(null, true, point);
-            dcd.setVisible(true);
-            txt1.setText(dateFmtShow.format(dcd.getSelectedDate().getTime()));
-            txt2.requestFocus();
-        }
+        
     }//GEN-LAST:event_txt1KeyPressed
 
     private void txt1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1KeyReleased
@@ -465,7 +406,7 @@ public class Report_InGroup extends javax.swing.JDialog {
     }//GEN-LAST:event_txt1KeyReleased
 
     private void cmdProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProcessActionPerformed
-        cmdProcess();
+        
     }//GEN-LAST:event_cmdProcessActionPerformed
 
     private void cmdProcessKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmdProcessKeyPressed
@@ -473,13 +414,7 @@ public class Report_InGroup extends javax.swing.JDialog {
     }//GEN-LAST:event_cmdProcessKeyPressed
 
     private void btn_printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_printActionPerformed
-        if (txt1.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(this, msgNotFoundDocno);
-            txt1.requestFocus();
-            return;
-        }
-        cmdPrintOrder();
-        txt1.requestFocus();
+        
     }//GEN-LAST:event_btn_printActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed

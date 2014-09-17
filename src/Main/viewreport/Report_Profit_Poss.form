@@ -279,7 +279,7 @@
                       </Group>
                       <EmptySpace pref="14" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jPanel2" alignment="0" pref="0" max="32767" attributes="1"/>
+                  <Component id="jPanel2" alignment="0" pref="79" max="32767" attributes="1"/>
               </Group>
             </DimensionLayout>
           </Layout>

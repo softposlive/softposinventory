@@ -640,63 +640,31 @@ public class Report_Profit_Id extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt1FocusGained
-        if(txt1.getText().trim().equals("")){
-            Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.DAY_OF_MONTH,1);
-            txt1.setText(Format.dateFmtShow.format(cal.getTime()));
-        }
-        txt1.selectAll();
+        
     }//GEN-LAST:event_txt1FocusGained
 
     private void txt1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1KeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_F1){
-            cmdDateChoose1();
-        }
-        else if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-            txt2.requestFocus();
-        }else if(evt.getKeyCode() == KeyEvent.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == KeyEvent.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txt1KeyPressed
 
     private void txt2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt2FocusGained
-        if(txt2.getText().trim().equals("")){
-            Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.DAY_OF_MONTH, DateUtilities.getMaxDay( (GregorianCalendar) cal ));
-            txt2.setText(Format.dateFmtShow.format(cal.getTime()));
-        }
-        if(txt1.getText().trim().equals("")){
-            txt1.requestFocus();
-        }
-        txt2.selectAll();
+        
     }//GEN-LAST:event_txt2FocusGained
 
     private void txt2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2KeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_F1){
-            cmdDateChoose2();
-        }
-        else if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-            txtPcode1.requestFocus();
-        }else if(evt.getKeyCode() == KeyEvent.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == KeyEvent.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txt2KeyPressed
 
     private void cmdDateChoose1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdDateChoose1ActionPerformed
-        cmdDateChoose1();
+        
     }//GEN-LAST:event_cmdDateChoose1ActionPerformed
 
     private void cmdDateChoose2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdDateChoose2ActionPerformed
-        cmdDateChoose2();
+        
     }//GEN-LAST:event_cmdDateChoose2ActionPerformed
 
     private void cmdProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProcessActionPerformed
-        cmdProcess();
-        tb3.requestFocus();
+        
     }//GEN-LAST:event_cmdProcessActionPerformed
 
     private void txtPcode1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPcode1FocusGained
@@ -704,16 +672,7 @@ public class Report_Profit_Id extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPcode1FocusGained
 
     private void txtPcode1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPcode1KeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_F1){
-            cmdProductChoose3ActionPerformed(new ActionEvent(new Object(),0,""));
-        }
-        else if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-            txtPcode2.requestFocus();
-        }else if(evt.getKeyCode() == KeyEvent.VK_ESCAPE){
-            dispose();
-        }else if (evt.getKeyCode() == KeyEvent.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txtPcode1KeyPressed
 
     private void txtPcode2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPcode2FocusGained
@@ -721,20 +680,11 @@ public class Report_Profit_Id extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPcode2FocusGained
 
     private void txtPcode2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPcode2KeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_F1){
-            cmdProductChoose4ActionPerformed(new ActionEvent(new Object(),0,""));
-        }else if (evt.getKeyCode() == KeyEvent.VK_F5) {
-            cmdProcess();
-        }
+        
     }//GEN-LAST:event_txtPcode2KeyPressed
 
     private void cmdProductChoose3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProductChoose3ActionPerformed
-        Jdi_Inv_product jbpa = new Jdi_Inv_product(new NimbusFrame(),true);
-        jbpa.setLocation(cmdProductChoose3.getLocationOnScreen());
-        jbpa.setVisible(true);
-        if(jbpa.getDataRecord() != null){
-            txtPcode1.setText(jbpa.getDataRecord().getPcode());
-        }
+        
     }//GEN-LAST:event_cmdProductChoose3ActionPerformed
 
     private void cmdProductChoose3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmdProductChoose3KeyPressed
@@ -742,12 +692,7 @@ public class Report_Profit_Id extends javax.swing.JDialog {
     }//GEN-LAST:event_cmdProductChoose3KeyPressed
 
     private void cmdProductChoose4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProductChoose4ActionPerformed
-        Jdi_Inv_product jbpa = new Jdi_Inv_product(new NimbusFrame(),true);
-        jbpa.setLocation(cmdProductChoose4.getLocationOnScreen());
-        jbpa.setVisible(true);
-        if(jbpa.getDataRecord() != null){
-            txtPcode2.setText(jbpa.getDataRecord().getPcode());
-        }
+        
     }//GEN-LAST:event_cmdProductChoose4ActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
@@ -755,28 +700,15 @@ public class Report_Profit_Id extends javax.swing.JDialog {
     }//GEN-LAST:event_b3ActionPerformed
 
     private void tblDetailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblDetailKeyPressed
-        if(evt.getKeyCode() == evt.VK_ESCAPE){
-            txt1.requestFocus();
-        }
+        
     }//GEN-LAST:event_tblDetailKeyPressed
 
     private void tblHeaderMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblHeaderMouseReleased
-        int index = tblHeader.getSelectedRow();
-        if (index != -1) {
-            loadDetail(tblHeader.getValueAt(index, 0).toString());
-        }
+        
     }//GEN-LAST:event_tblHeaderMouseReleased
 
     private void tblHeaderKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblHeaderKeyPressed
-        int key = evt.getKeyCode();
-        if(key == evt.VK_ESCAPE){
-            txt1.requestFocus();
-        }else if (key == evt.VK_UP || key == evt.VK_DOWN || key == evt.VK_ENTER) {
-            int index = tblHeader.getSelectedRow();
-            if (index != -1) {
-                loadDetail(tblHeader.getValueAt(index, 0).toString());
-            }
-        }
+        
     }//GEN-LAST:event_tblHeaderKeyPressed
 
     private void tblHeader1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblHeader1MouseReleased
@@ -788,13 +720,7 @@ public class Report_Profit_Id extends javax.swing.JDialog {
     }//GEN-LAST:event_tblHeader1KeyPressed
 
     private void btn_print2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_print2ActionPerformed
-        if (txt1.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(this, msgNotFoundDocno);
-            txt1.requestFocus();
-            return;
-        }
-        cmdPrintOrder();
-        txt1.requestFocus();
+        
     }//GEN-LAST:event_btn_print2ActionPerformed
 
     private void txtPcode3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPcode3FocusGained
