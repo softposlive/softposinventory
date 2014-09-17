@@ -325,11 +325,11 @@ public class View_Bproduct_PLU extends javax.swing.JDialog {
 
             },
             new String [] {
-                "รหัสสินค้า (PLU Code)", "ชื่อสินค้า/รายการ", "จำนวน", "หน่วยนับ", "จำนวนเงิน", ""
+                "รหัสสินค้า (PLU Code)", "ชื่อสินค้า/รายการ", "จำนวน", "หน่วยนับ", "จำนวนเงิน"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -538,7 +538,8 @@ public class View_Bproduct_PLU extends javax.swing.JDialog {
                 .addComponent(jTabbedPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 634, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1024, 768));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt1FocusGained
@@ -567,7 +568,7 @@ public class View_Bproduct_PLU extends javax.swing.JDialog {
 
     private void cmdProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdProcessActionPerformed
         
-        tb3.requestFocus();
+ 
     }//GEN-LAST:event_cmdProcessActionPerformed
 
     private void txtPcode1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPcode1FocusGained
@@ -670,151 +671,37 @@ public class View_Bproduct_PLU extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b3;
-    private javax.swing.JButton btn_print;
-    private javax.swing.JButton btn_print1;
     private javax.swing.JButton btn_print2;
     private javax.swing.JButton cmdDateChoose1;
     private javax.swing.JButton cmdDateChoose2;
-    private javax.swing.JButton cmdPrint;
-    private javax.swing.JButton cmdPrint1;
-    private javax.swing.JButton cmdPrint2;
-    private javax.swing.JButton cmdPrint3;
-    private javax.swing.JButton cmdPrint4;
-    private javax.swing.JButton cmdPrint5;
-    private javax.swing.JButton cmdPrint6;
-    private javax.swing.JButton cmdPrint7;
     private javax.swing.JButton cmdProcess;
     private javax.swing.JButton cmdProductChoose3;
     private javax.swing.JButton cmdProductChoose4;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane14;
-    private javax.swing.JScrollPane jScrollPane15;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
-    private javax.swing.JScrollPane jScrollPane18;
-    private javax.swing.JScrollPane jScrollPane19;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane20;
-    private javax.swing.JScrollPane jScrollPane21;
-    private javax.swing.JScrollPane jScrollPane22;
-    private javax.swing.JScrollPane jScrollPane23;
-    private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane28;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane12;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
-    private javax.swing.JTabbedPane jTabbedPane7;
-    private javax.swing.JTabbedPane jTabbedPane8;
-    private javax.swing.JTable tb1;
-    private javax.swing.JTable tb10;
-    private javax.swing.JTable tb11;
-    private javax.swing.JTable tb12;
-    private javax.swing.JTable tb13;
-    private javax.swing.JTable tb14;
-    private javax.swing.JTable tb15;
-    private javax.swing.JTable tb16;
-    private javax.swing.JTable tb17;
-    private javax.swing.JTable tb18;
-    private javax.swing.JTable tb19;
-    private javax.swing.JTable tb2;
-    private javax.swing.JTable tb20;
-    private javax.swing.JTable tb21;
-    private javax.swing.JTable tb22;
-    private javax.swing.JTable tb23;
-    private javax.swing.JTable tb24;
-    private javax.swing.JTable tb3;
-    private javax.swing.JTable tb4;
-    private javax.swing.JTable tb5;
-    private javax.swing.JTable tb6;
-    private javax.swing.JTable tb7;
-    private javax.swing.JTable tb8;
-    private javax.swing.JTable tb9;
     private javax.swing.JTable tblDetail;
     private javax.swing.JTable tblHeader;
     private javax.swing.JTable tblHeader1;
     private javax.swing.JFormattedTextField txt1;
     private javax.swing.JFormattedTextField txt2;
-    private javax.swing.JTextField txtAmt;
-    private javax.swing.JTextField txtAmt1;
-    private javax.swing.JTextField txtAmt2;
-    private javax.swing.JTextField txtAmt3;
-    private javax.swing.JTextField txtAmt4;
-    private javax.swing.JTextField txtAmt5;
-    private javax.swing.JTextField txtAmt6;
-    private javax.swing.JTextField txtAmt7;
     private javax.swing.JTextField txtAmt8;
     private javax.swing.JTextField txtAmt9;
-    private javax.swing.JTextField txtHlist;
-    private javax.swing.JTextField txtHlist1;
-    private javax.swing.JTextField txtHlist2;
-    private javax.swing.JTextField txtHlist3;
-    private javax.swing.JTextField txtHlist4;
-    private javax.swing.JTextField txtHlist5;
-    private javax.swing.JTextField txtHlist6;
-    private javax.swing.JTextField txtHlist7;
     private javax.swing.JTextField txtHlist8;
     private javax.swing.JTextField txtHlist9;
     private javax.swing.JFormattedTextField txtPcode1;
     private javax.swing.JFormattedTextField txtPcode2;
-    private javax.swing.JTextField txtQty;
-    private javax.swing.JTextField txtQty1;
-    private javax.swing.JTextField txtQty2;
-    private javax.swing.JTextField txtQty3;
-    private javax.swing.JTextField txtQty4;
-    private javax.swing.JTextField txtQty5;
-    private javax.swing.JTextField txtQty6;
-    private javax.swing.JTextField txtQty7;
     private javax.swing.JTextField txtQty8;
     private javax.swing.JTextField txtQty9;
     // End of variables declaration//GEN-END:variables
